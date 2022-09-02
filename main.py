@@ -1,8 +1,13 @@
 import zipfile
 import os
+import time
 
 zip_file = input("[+] ZIP file: ")
 word_list = input("[+] Password list: ")
+
+start = time.time()
+end = time.time()
+
 
 def alertAndExit(message):
 	print(message)
@@ -28,7 +33,10 @@ with open(word_list, "rb") as f:
 		try:
 			zipf.extractall('results', None, x)
 			print("[*] Password found.")
+			end = time.time()
+			print("Total time used:", (end - start)//60, " mins", (end - start)%60, " seconds")
 			alertAndExit(f"[*] Password: {x.decode('utf8')}")
 		except Exception:
 			pass
 	print("[!] Valid password is not found.")
+	
