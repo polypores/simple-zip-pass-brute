@@ -5,7 +5,7 @@ Use Python 3.10.2 please.
 
 Clone this project
 ```
-git clone https://github.com/jinshinvn/simple-zip-pass-brute
+git clone https://github.com/polypores/simple-zip-pass-brute
 ```
 The requirements.txt file is existed in this project just for decoration :D
 
